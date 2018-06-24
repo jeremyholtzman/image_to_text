@@ -1,5 +1,3 @@
-# https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/
-
 # run the file with
 # python2 ocr.py -i example_01.png
 # or
@@ -29,9 +27,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # check to see if we should apply thresholding to preprocess the
 # Next, depending on the pre-processing method specified by our command line argument,
-# we will either threshold or blur the image. This is where you would want to add more
-# advanced pre-processing methods (depending on your specific application of OCR) which are beyond the scope of this blog post.
-# image
+# we will either threshold or blur the image.
 if args["preprocess"] == "thresh":
 	gray = cv2.threshold(gray, 0, 255,
 		cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
